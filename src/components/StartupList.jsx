@@ -7,7 +7,7 @@ const StartupList = ({ onCardClick, filter }) => {
   const [startups, setStartups] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/startups')
+    axios.get('https://startup-dir.onrender.com/startups')
       .then(response => setStartups(response.data))
       .catch(error => console.error('Error fetching startups:', error));
   }, []);

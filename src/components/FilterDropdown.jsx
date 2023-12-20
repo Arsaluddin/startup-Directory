@@ -8,7 +8,7 @@ const FilterDropdown = ({ onFilterChange }) => {
 
   useEffect(() => {
     // Fetch unique industry values from the server
-    axios.get('http://localhost:3001/startups')
+    axios.get('https://startup-dir.onrender.com/startups')
       .then(response => {
         const uniqueIndustries = [...new Set(response.data.map(startup => startup.IndustryVertical))];
         setIndustryOptions(['', ...uniqueIndustries]); // Include an option for "All Industries"
